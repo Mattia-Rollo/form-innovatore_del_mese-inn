@@ -70,7 +70,18 @@
   <link rel="stylesheet" href="media-query.css">
 
   <style>
+    .debug {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
 
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
   </style>
 
   <title>INNLIFES</title>
@@ -80,7 +91,7 @@
 
   <!-- header responsive desktop lg breakpoint -->
   <header id="header-desktop"
-    class="container d-none  rounded-4 bg-very-light-grey shadow-lg d-lg-flex align-items-center position-fixed justify-content-lg-around py-3"
+    class="container d-none  rounded-4 bg-very-light-grey shadow-lg align-items-center position-fixed justify-content-lg-around py-3"
     style="z-index: 10;top: 7rem; left: 50%;transform: translateX(-50%);">
     <div class="step d-flex align-items-center">
 
@@ -88,7 +99,7 @@
         style="height: 3rem; width: 3rem;">
         <span class=" d-block fw-bolder fs-5 m-auto ">1</span>
       </div>
-      <span class="fs-6 fw-bold ps-2">Informazioni</span>
+      <span class="fs-6 fw-bold ps-2">Chi vuoi Candidare?</span>
     </div>
 
     <div class="bar d-none d-xxl-block bg-light-grey mx-4 rounded-3 d-block" style="height: .1rem; width: 3vw;">
@@ -105,38 +116,7 @@
     <div class="bar d-none d-xxl-block bg-light-grey mx-4  rounded-3 d-block" style="height: .1rem; width: 3vw;">
     </div>
 
-    <div class="step d-flex align-items-center">
-      <div class="step-icon text-white  bg-light-grey rounded-circle text-center d-flex"
-        style="height: 3rem; width: 3rem;">
-        <span class=" d-block fw-bolder fs-5 m-auto">3</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2">Founders</span>
-    </div>
 
-    <div class="bar d-none d-xxl-block bg-light-grey mx-4  rounded-3 d-block" style="height: .1rem; width: 3vw;">
-    </div>
-
-    <div class="step d-flex align-items-center">
-      <div class="step-icon text-white  bg-light-grey rounded-circle text-center d-flex"
-        style="height: 3rem; width: 3rem;">
-        <span class=" d-block fw-bolder fs-5 m-auto">4</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2 " style="white-space: nowrap;">Other info</span>
-    </div>
-
-    <div class="bar d-none d-xxl-block bg-light-grey mx-4  rounded-3 d-block" style="height: .1rem; width: 3vw;">
-    </div>
-
-    <div class="step d-flex align-items-center">
-      <div class="step-icon text-white  bg-light-grey rounded-circle text-center d-flex"
-        style="height: 3rem; width: 3rem;">
-        <span class=" d-block fw-bolder fs-5 m-auto">5</span>
-      </div>
-      <span class="fw-bold ps-2 ">Documents</span>
-    </div>
-
-    <div class="bar d-none d-xxl-block bg-light-grey mx-4  rounded-3 d-block" style="height: .1rem; width: 3vw;">
-    </div>
 
     <div class="step d-flex align-items-center">
       <div class="step-icon text-white  bg-light-grey rounded-circle text-center d-flex"
@@ -149,14 +129,14 @@
 
   <!-- header responsive mobile -->
   <header id="header-mobile" style="z-index: 10; left:50%; transform: translateX(-50%);"
-    class="container bg-very-light-grey rounded-4 d-lg-none shadow-lg-mr d-flex align-items-center position-fixed justify-content-center overflow-hidden py-2">
+    class="container bg-very-light-grey rounded-4 shadow-lg-mr d-flex align-items-center position-fixed justify-content-center overflow-hidden py-2">
     <div class="step d-flex align-items-center">
 
-      <div class="step-icon text-white  bg-blue-mr rounded-circle text-center d-flex"
+      <!-- <div class="step-icon text-white  bg-blue-mr rounded-circle text-center d-flex"
         style="height: 3rem; width: 3rem;">
         <span id="step-icon-mobile" class=" d-block fw-bolder fs-3 m-auto ">1</span>
-      </div>
-      <span id="step-title-mobile" class="fs-3 fw-bold ps-2">Informazioni</span>
+      </div> -->
+      <span id="step-title-mobile" class="fs-3 fw-bold ps-2">Chi vuoi candidare?</span>
       <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
@@ -176,14 +156,13 @@
     <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
       style="width: 17em;">
   </div>
-  <div class="container px-md-5">
-    <form id="myForm" class="pb-3 need-validation" action="server.php" method="post" enctype='multipart/form-data'
-      style="min-height: calc(100vh - 16.8rem);" novalidate>
+  <div class="container px-md-5" style="min-height: calc(100vh - 14.8rem);">
+    <form data-multi-step>
       <!--#############################################-->
       <!--#################à SLIDE 1 - informazioni ###################-->
-      <div id="slide-1" class="slide container ">
+      <div id="slide-1" class="slide container debug" data-step="1">
         <!-- <h1 class="pt-5 " >slide 1</h1> -->
-        <p class="pt-1 pb-2">
+        <!-- <p class="pt-1 pb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
           odio consectetur corporis veritatis atque non consequuntur at
           asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
@@ -194,88 +173,31 @@
           itaque corrupti neque perferendis ullam unde architecto consequuntur
           at provident blanditiis dignissimos, quibusdam facere, aliquid
           doloribus necessitatibus fuga nemo?
-        </p>
+        </p> -->
         <div class="row">
-          <div class="col-12 col-md">
-            <!-- tipologia -->
-            <label for="tipologia" class="form-label fw-bold">Tipologia *</label>
-            <select id="tipologia" name="tipologia" class="form-select mb-2" placeholder="Tipologia " required />
-            <option selected disabled value="">...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            </select>
-            <!-- nome  -->
-            <label for="nome" class="form-label fw-bold">Nome*</label>
-            <div class="mb-3 position-relative">
-              <input id="nome" type="text" class="form-control" name="nome_startup" placeholder="Nome" required />
-              <!-- <div class="invalid-tooltip">
-                  inserire il nome
-                </div> -->
+          <div class="col-12 col-md text-center d-flex">
+            <div class="m-auto">
+              <input class="checkbox-tools" type="radio" name="tools" id="tool-1" value="1" required>
+              <label class="for-checkbox-tools" for="tool-1">
+                <i class='uil uil-line-alt'></i>
+                Una startup che conosco
+              </label>
             </div>
-            <!-- benefit -->
-            <label for="benefit" class="form-label fw-bold">Benefit *</label>
-            <!-- si -->
-            <div class="input-group ">
-              <div class="input-group-text bg-transparent w-100">
-                <input class="form-check-input mt-0" type="radio" name="benefit" value="si" required />
-                <span type="text" class="ms-2">
-                  si
-                </span>
-              </div>
-            </div>
-            <!-- no -->
-            <div class="input-group mt-1">
-              <div class="input-group-text bg-transparent w-100">
-                <input class="form-check-input mt-0" type="radio" name="benefit" value="no" required />
-                <span type="text" class="ms-2">
-                  no
-                </span>
-              </div>
-            </div>
-            <!-- data costruzione  -->
-            <label for="data_costruzione" class="form-label fw-bold mt-3">
-              Data Costruzione *
-            </label>
-            <div class="input-group mb-3">
-              <input type="date" class="form-control" name="data_costruzione" required />
-            </div>
-            <!-- sito web  -->
-            <label for="sito_web" class="form-label fw-bold">Sito web </label>
-            <div class="input-group mb-3">
-              <input type="text" name="sito_web" class="form-control" placeholder="Sito web" />
-            </div>
+
           </div>
           <!--########## PARTE A DESTRA  #####################-->
-          <div class="col">
-            <div class="mb-3">
-              <label for="logo" class="form-label fw-bold">
-                Logo
-              </label>
-              <input type="file" name="logo" class="filepond form-control" id="logo" placeholder="logo" required />
-            </div>
-            <div class="mb-3">
-              <label for="descrizione" class="form-label fw-bold">
-                Descrizione *
-              </label> <span id="charNum" class="text-success"></span><span id="charNum-text"
-                class="text-success px-2"></span>
-              <textarea class="form-control" onkeyup="countChar(this)" max="600" style="height: 200px" id="descrizione"
-                name="descrizione" required></textarea>
-            </div>
-            <!-- numero soci  -->
-            <label for="basic-url" class="form-label fw-bold">
-              Numero Soci *
+          <div class="col text-center">
+            <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
+            <label class="for-checkbox-tools" for="tool-2">
+              <i class='uil uil-vector-square'></i>
+              La mia startup
             </label>
-            <div class="input-group mb-3">
-              <input type="number" class="form-control" name="numero_soci" placeholder="Inserire un Valore"
-                aria-label="Username" required />
-            </div>
           </div>
         </div>
       </div>
       <!--#############################################-->
       <!--#################à SLIDE 2 - Headquarters ###################-->
-      <div id="slide-2" class="slide container pt-5">
+      <div id="slide-2" class="slide container pt-5 debug " data-step="2">
         <!-- <div class="pb-5">
             <h1>slide 2</h1>
           </div> -->
@@ -376,571 +298,10 @@
           </div>
         </div>
       </div>
+
       <!--#############################################-->
-      <!--#################à SLIDE 3 - Founders ###################-->
-      <div id="slide-3" class="slide container pt-5">
-        <!-- <div class="pb-5">
-            <h1>slide 3</h1>
-          </div> -->
-        <div class="founder row">
-          <div class="col">
-            <h3 class="text-center p-3">Founder</h3>
-            <!-- nome e cognome  -->
-            <div class="row">
-              <div class="col">
-                <!-- via -->
-                <label for="nome_founder_1" class="form-label fw-bold">Nome *</label>
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" name="nome_founder_1" placeholder="Nome" required />
-                </div>
-              </div>
-              <div class="col">
-                <!-- città -->
-                <label for="cognome_founder" class="form-label fw-bold">Cognome*</label>
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" name="cognome_founder_1" placeholder="Cognome" required />
-                </div>
-              </div>
-            </div>
-            <!-- nome di telefono email  -->
-            <div class="row">
-              <div class="col">
-                <label for="tel_founder_1" class="form-label fw-bold">
-                  Numero di telefono
-                </label>
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" name="tel_founder_1" placeholder="Numero" />
-                </div>
-              </div>
-              <div class="col">
-                <label for="email_founder_1" class="form-label fw-bold">Email *</label>
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" name="email_founder_1" placeholder="CAP" required />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- bottone aggiungi founder -->
-        <div id="aggiungi_rimuovi" class="text-center py-2">
-          <div class="container">
-            <div class="row">
-              <div class="col text-end">
-                <button id="btn_aggiungi" type="button" class="btn rounded-pill shadow text-black"
-                  style="background-color: #ffffff!important;">
-                  aggiungi founder<i class="ms-2 fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <div class="col text-start">
-                <button id="btn_rimuovi" type="button" class="btn rounded-pill shadow text-black"
-                  style="background-color: #ffffff!important;">
-                  rimuovi<i class="ms-2 fa-solid fa-minus"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--#############################################-->
-      <!--#################à SLIDE 4 - Other info ###################-->
-      <div id="slide-4" class="slide container pt-5">
-        <!-- <div class="pb-5">
-            <h1>slide 4</h1>
-          </div> -->
-        <!-- Numero Dipendenti 22/23  -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <!-- N° Dipendenti 12/2022 -->
-            <label for="n_dipendenti_2022" class="form-label fw-bold">
-              Numero Dipendenti (Dicembre 2022)
-            </label>
-            <div class="input-group mb-3">
-              <input type="number" class="form-control" name="n_dipendenti_2022" placeholder="Numero Dipendenti 2022" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <!-- N° Dipendenti 12/2023 -->
-            <label for="n_dipendenti_2023" class="form-label fw-bold">
-              Numero Dipendenti (Dipendenti 2023)
-            </label>
-            <div class="input-group mb-3">
-              <input type="number" class="form-control" name="n_dipendenti_2023" placeholder="Numero Dipendenti 2023" />
-            </div>
-          </div>
-        </div>
-        <!-- stato di vita - numero di round raccolti  -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="stato_di_vita" class="form-label fw-bold">Stato di Vita</label>
-            <div class="input-group mb-3">
-              <select class="form-control" name="status_di_vita">
-                <option selected value="0">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-          </div>
-          <div class="col">
-            <label for="n_round_raccolta" class="form-label fw-bold">
-              Numero di round di raccolta
-            </label>
-            <div class="input-group mb-3">
-              <input type="number" class="form-control" name="n_round_raccolta"
-                placeholder="Numeri di round di raccolta" required />
-            </div>
-          </div>
-        </div>
-        <!--############### CAPITALE RACCOLTO #############################-->
-        <h3 class="border-bottom border-1 mt-4 mb-4">CAPITALE RACCOLTO *</h3>
-        <!-- founder Investiror -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="founder" class="form-label fw-bold">Founder</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text">%</span>
-              <input type="number" class="form-control" name="founder" placeholder="Inserire una percentuale" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <label for="Investiror" class="form-label fw-bold">Investiror </label>
-            <div class="input-group mb-3">
-              <span class="input-group-text">%</span>
-              <input type="number" class="form-control" name="Investiror" placeholder="Inserire una percentuale" />
-            </div>
-          </div>
-        </div>
-        <!-- Crowfunding Finanziamenti -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="crowfunding" class="form-label fw-bold">Crowfunding</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text">%</span>
-              <input type="number" class="form-control" name="crowfunding" placeholder="Inserire una percentuale" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <label for="finanziamenti" class="form-label fw-bold">Finanziamenti*</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text">%</span>
-              <input type="number" class="form-control" name="finanziamenti" placeholder="Inserire una percentuale" />
-            </div>
-          </div>
-        </div>
-        <!-- Equity value  - Status -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="equity_value" class="form-label fw-bold">Equity Value</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text">%</span>
-              <input type="number" class="form-control" name="equity_value" placeholder="Inserire una percentuale" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <label for="status" class="form-label fw-bold">Status*</label>
-            <div class="input-group mb-3">
-              <select type="text" class="form-control" name="status" placeholder="Numero" required>
-                <option selected disabled value="">...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <!-- exit -  RevenueY1salses -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="Exit" class="form-label fw-bold">Exit</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="radio" class="form-check-input rounded-circle" name="Exit" value="si"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">si</label>
-              <input type="radio" class="form-check-input rounded-circle" name="Exit" value="no"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">no</label>
-            </div>
-          </div>
-          <!-- <label for="benefit" class="form-label fw-bold">Benefit *</label>
-    
-              <div class="input-group ">
-                <div class="input-group-text bg-transparent w-100">
-                  <input class="form-check-input mt-0" type="radio" name="benefit" value="si" required />
-                  <span type="text" class="ms-2">
-                    si
-                  </span>
-                </div>
-              </div>
-    
-              <div class="input-group mt-1">
-                <div class="input-group-text bg-transparent w-100">
-                  <input class="form-check-input mt-0" type="radio" name="benefit" value="no" />
-                  <span type="text" class="ms-2">
-                    no
-                  </span>
-                </div> -->
-          <div class="col-12 col-md">
-            <label for="revenueY1salses" class="form-label fw-bold">RevenueY1salses*</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="revenueY1salses" placeholder="Inserisci un valore"
-                required />
-            </div>
-          </div>
-        </div>
-        <!-- RevenueY3salses - EbidtaY1 -->
-        <div class="row">
-          <!-- RevenueY3salses -->
-          <div class="col-12 col-md">
-            <label for="revenueY3salses" class="form-label fw-bold">RevenueY3salses</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="revenueY3salses" placeholder="Inserisci un valore"
-                required />
-            </div>
-          </div>
-          <!-- EbidtaY1 -->
-          <div class="col-12 col-md">
-            <label for="EbidtaY1" class="form-label fw-bold">EbidtaY1</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="EbidtaY1" placeholder="Inserisci un valore" required />
-            </div>
-          </div>
-        </div>
-        <!-- EbidtaY3 - settore industriale -->
-        <div class="row">
-          <!-- RevenueY3salses -->
-          <div class="col-12 col-md">
-            <label for="EbidtaY3" class="form-label fw-bold">EbidtaY3</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="EbidtaY3" placeholder="Inserisci un valore" required />
-            </div>
-          </div>
-          <!-- EbidtaY1 -->
-          <div class="col-12 col-md">
-            <label for="settore_industriale" class="form-label fw-bold">
-              Settore Industriale
-            </label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="settore_industriale" placeholder="Inserisci un valore"
-                required />
-            </div>
-          </div>
-        </div>
-        <!-- area/indicazione terapeutica  -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="area_terapeutica" class="form-label fw-bold">
-              Area/Indicazione terapeutica
-            </label>
-            <div class="input-group mb-3 gap-2">
-              <!-- <input type="text" class="form-control" name="area_terapeutica" placeholder="Inserisci un valore" /> -->
-              <select type="text" class="form-control" name="area_terapeutica" required>
-                <option selected disabled value="">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-          </div>
-          <div class="col"></div>
-        </div>
-        <!--#################à Prodotto #####################à-->
-        <h3 class="border-bottom border-1 mt-4 mb-4">PRODOTTO *</h3>
-        <div class="row">
-          <!-- tipologia di prodotto - se Medtech - se Biotech - se Digital Therapeutics -->
-          <div class="col-12 col-md">
-            <!-- Tipologia di prodotto -->
-            <label for="tipologia_prodotto" class="form-label fw-bold">
-              Tipologia di prodotto *
-            </label>
-            <div class="input-group mb-3 gap-2">
-              <select type="text" class="form-control" name="tipologia_prodotto" required>
-                <option selected disabled value="">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-            <!-- se Medtech -->
-            <label for="se_Medtech" class="form-label fw-bold">se Medtech</label>
-            <div class="input-group mb-3 gap-2">
-              <select type="text" class="form-control" name="se_Medtech">
-                <option selected value="0">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-            <!-- se Biotech -->
-            <label for="se_Biotech" class="form-label fw-bold">se Biotech</label>
-            <div class="input-group mb-3 gap-2">
-              <select type="text" class="form-control" name="se_Biotech">
-                <option selected value="0">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-            <!-- se Digital Therapeutics -->
-            <label for="se_Digital_Therapeutics" class="form-label fw-bold">
-              se Digital Therapeutics*
-            </label>
-            <div class="input-group mb-3 gap-2">
-              <select type="text" class="form-control" name="se_Digital_Therapeutics">
-                <option selected value="0">. . .</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-          </div>
-          <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
-          <div class="col">
-            <label class="form-label fw-bold">Altro(Specificare)*</label>
-            <textarea class="form-control mb-3" name="altro" rows="6" required></textarea>
-            <!-- FDA - EMEA  -->
-            <div class="row">
-              <div class="col">
-                <label class="form-label fw-bold">FDA approved</label>
-                <div class="input-group mb-3 gap-2">
-                  <input type="radio" class="form-check-input rounded-circle" name="FDA_1" value="si"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">si</label>
-                  <input type="radio" class="form-check-input rounded-circle" name="FDA_1" value="no"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">no</label>
-                </div>
-              </div>
-              <div class="col">
-                <label class="form-label fw-bold">EMEA approved</label>
-                <div class="input-group mb-3 gap-2 ">
-                  <input type="radio" class="form-check-input rounded-circle" name="EMEA" value="si"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">si</label>
-                  <input type="radio" class="form-check-input rounded-circle" name="EMEA" value="no"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">no</label>
-                </div>
-              </div>
-            </div>
-            <!-- FDA - CE -->
-            <div class="row">
-              <div class="col">
-                <label class="form-label fw-bold">FDA approved</label>
-                <div class="input-group mb-3 gap-2 ">
-                  <input type="radio" class="form-check-input rounded-circle" name="FDA_2" value="si"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">si</label>
-                  <input type="radio" class="form-check-input rounded-circle" name="FDA_2" value="no"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">no</label>
-                </div>
-              </div>
-              <div class="col">
-                <label class="form-label fw-bold">CE approved</label>
-                <div class="input-group mb-3 gap-2">
-                  <input type="radio" name="CE" class="form-check-input rounded-circle" value="si"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">si</label>
-                  <input type="radio" name="CE" class="form-check-input rounded-circle" value="no"
-                    style="width: 1.2rem; height: 1.2rem" required />
-                  <label class="form-label m-0">no</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--################# Market #####################-->
-        <h3 class="border-bottom border-1 mt-5 mb-4">MARKET *</h3>
-        <div class="row">
-          <!-- mercato - nome dispositivo - dispositivo medico - se Digital Therapeutics - altro -->
-          <div class="col">
-            <!-- mercato -->
-            <div class="input-group mb-3 required">
-              <div class="me-5">
-                <input type="checkbox" class="form-check-input" name="mercato"
-                  placeholder="Inserisci un valore" /><label class="form-label ms-2" value="US">US</label>
-              </div>
-              <div class="me-5">
-                <input type="checkbox" class="form-check-input" name="mercato"
-                  placeholder="Inserisci un valore" /><label class="form-label ms-2" value="EU">EU</label>
-              </div>
-              <div class="me-5">
-                <input type="checkbox" class="form-check-input" name="mercato"
-                  placeholder="Inserisci un valore" /><label class="form-label ms-2" value="AS">ASIA</label>
-              </div>
-              <div class="me-5">
-                <input type="checkbox" class="form-check-input" name="mercato"
-                  placeholder="Inserisci un valore" /><label class="form-label ms-2" value="LAT">LAT</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- nome dispositivo -->
-          <div class="col-12 col-md">
-            <label for="nome_dispositivo" class="form-label fw-bold">Nome Dispositivo</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="nome_dispositivo" placeholder=" Inserisci un valore" />
-            </div>
-          </div>
-          <!-- dispositivo medico si/no -->
-          <div class="col-12 col-md">
-            <label for="dispositivo_medico" class="form-label fw-bold">Dispositivo Medico</label>
-            <div class="input-group mb-3 gap-2 ">
-              <input type="radio" class="form-check-input rounded-circle" name="dispositivo_medico" value="si"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">si</label>
-              <input type="radio" class="form-check-input rounded-circle" name="dispositivo_medico" value="no"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">no</label>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Paese in cui è distribuito -->
-          <div class="col-12 col-md">
-            <label for="paese_distribuito" class="form-label fw-bold">
-              Paese in cui è distribuito
-            </label>
-            <select type="text" class="form-control" name="paese_distribuito">
-              <option selected disabled value="">. . .</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="col"></div>
-        </div>
-        <!-- Combinazione di farmaci - quali farmaci  -->
-        <div class="row pt-3">
-          <div class="col-12 col-md">
-            <label for="combinazione_farmaci" class="form-label fw-bold">Combinazione di farmaci</label>
-            <div class="input-group mb-3 gap-2 ">
-              <input type="radio" class="form-check-input rounded-circle" name="combinazione_farmaci" value="si"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">si</label>
-              <input type="radio" class="form-check-input rounded-circle" name="combinazione_farmaci" value="no"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">no</label>
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <label for="farmaci" class="form-label fw-bold">Quali farmaci?</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="farmaci" placeholder=" Inserisci un valore" />
-            </div>
-          </div>
-        </div>
-        <!-- prescrizione - DTX -->
-        <div class="row pt-2">
-          <div class="col-12 col-md">
-            <label for="prescrizione" class="form-label fw-bold">Prescrizione</label>
-            <div class="input-group mb-3 gap-2 ">
-              <input type="radio" class="form-check-input rounded-circle" name="prescrizione" value="si"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">si</label>
-              <input type="radio" class="form-check-input rounded-circle" name="prescrizione" value="no"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">no</label>
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <label for="DTX" class="form-label fw-bold">DTX</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="DTX" placeholder=" Inserisci un valore" />
-            </div>
-          </div>
-        </div>
-        <!-- Tipologia (tecnologia) -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="tecnologia" class="form-label fw-bold">
-              Tipologia (tecnologia)
-            </label>
-            <select type="text" class="form-control" name="tecnologia">
-              <option selected value="0">. . .</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="col-12 col-md">
-            <label for="DTX" class="form-label fw-bold">NTC numero di studio</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="text" class="form-control" name="DTX" placeholder="Inserisci un valore" />
-            </div>
-          </div>
-        </div>
-        <!-- Business model - Brevetti -->
-        <div class="row">
-          <div class="col-12 col-md">
-            <label for="business_model" class="form-label fw-bold">
-              Business model*
-            </label>
-            <select type="text" class="form-control" name="business_model" required>
-              <option selected value="0">. . .</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="col-12 col-md pt-2">
-            <label for="brevetti" class="form-label fw-bold">Brevetti*</label>
-            <div class="input-group mb-3 gap-2">
-              <input type="radio" class="form-check-input rounded-circle" name="brevetti" value="si"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">si</label>
-              <input type="radio" class="form-check-input rounded-circle" name="brevetti" value="no"
-                style="width: 1.2rem; height: 1.2rem" required />
-              <label class="form-label m-0">no</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--#############################################-->
-      <!--#################à SLIDE 5 - documents ###################-->
-      <div id="slide-5" class="slide container pt-5">
-        <div class="row">
-          <div class="col">
-            <div class="mb-3">
-              <label for="logo" class="form-label fw-bold">
-                One Page * <span class="fw-light">richiesto</span>
-              </label>
-              <input type="file" name="one_page" class="filepond " id="one-page" required />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="mb-3">
-              <label for="logo" class="form-label fw-bold">
-                Deck * <span class="fw-light">richiesto</span>
-              </label>
-              <input type="file" name="deck" class="filepond" id="deck" required />
-            </div>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col">
-            <div class="mb-3">
-              <label for="logo" class="form-label fw-bold">
-                Business Plan * <span class="fw-light">richiesto</span>
-              </label>
-              <input type="file" name="business_plan" class=" filepond" id="business-plan" required />
-            </div>
-          </div>
-        </div>
-        <!-- bottoni INDIETRO e INVIO  -->
-        <div class="row mb-2">
-          <div class="col d-flex ">
-            <button id="prev-last" type="button" class="btn rounded-pill shadow text-black w-100 text-uppercase"
-              style="background-color: #ffffff!important;">
-              indietro
-            </button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary rounded-pill text-uppercase w-100"
-              style="background-color: #00528c!important;">
-              invia
-            </button>
-          </div>
-        </div>
-      </div>
-      <!--#############################################-->
-      <!--#################à SLIDE 6 - conferma di invio ###################-->
-      <div id="slide-6" class="slide container pt-5 ">
+      <!--#################à SLIDE 3 - conferma di invio ###################-->
+      <div id="slide-6" class="slide container pt-5 debug" data-step="3">
         <div class="container p-5 shadow-lg rounded-5 text-center mt-sm-5 ">
           <div class="bg-blue-mr m-auto rounded-circle mb-3 d-flex" style="width: 5rem; height: 5rem;">
             <i class="fa-solid fa-check display-3 text-white m-auto"></i>
@@ -949,25 +310,28 @@
           <p class="fs-5 fw-bolder">Riceverai un amail di riepilogo della registrazione</p>
         </div>
       </div>
-    </form>
-  </div>
 
-  <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
-  <div id="controls" class="container my-3">
-    <div class="row">
-      <div class="col d-flex ">
-        <button id="prev" type="button" class="btn btn-primary rounded-pill text-uppercase"
-          style="background-color: #00528c!important;">
-          <i class="fa-solid fa-chevron-left me-3"></i> indietro
-        </button>
+
+
+      <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
+      <div id="controls" class="container my-3">
+        <div class="row">
+          <div class="col d-flex ">
+            <button id="prev" type="button" class="btn btn-primary rounded-pill text-uppercase"
+              style="background-color: #00528c!important;" data-previous>
+              <i class="fa-solid fa-chevron-left me-3"></i> indietro
+            </button>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase"
+              style="background-color: #00528c!important;" data-next>
+              avanti <i class="ms-3 fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="col d-flex justify-content-end">
-        <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase"
-          style="background-color: #00528c!important;">
-          avanti <i class="ms-3 fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
+
+    </form>
   </div>
 
 

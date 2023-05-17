@@ -9,13 +9,13 @@ footer {
     top: 7rem;
   }
   footer {
-    font-size: xx-small;
+    font-size: small;
   }
   button#prev{
-    width: 30%;
+    width: 50%;
   }
   button#next{
-    width: 30%;
+    width: 50%;
   }
 }
 
