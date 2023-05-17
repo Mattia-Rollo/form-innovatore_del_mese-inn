@@ -1,0 +1,52 @@
+/* #header-mobile {
+      top: calc(20vw - 0.1rem);
+    } */
+footer {
+  font-size: small;
+}
+@media screen and (max-width: 1920px) {
+  #header-mobile {
+    top: 7rem;
+  }
+  footer {
+    font-size: xx-small;
+  }
+  button#prev{
+    width: 30%;
+  }
+  button#next{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #header-mobile {
+    top: 7rem;
+  }
+  body {
+    padding-top: 13rem;
+  }
+  button#prev{
+    width: 50%;
+  }
+  button#next{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header-mobile {
+    top: 5rem;
+  }
+  button#prev{
+    width: 100%;
+  }
+  button#next{
+    width: 100%;
+  }
+  body {
+    padding-top: 10rem;
+  }
+}
+
+
