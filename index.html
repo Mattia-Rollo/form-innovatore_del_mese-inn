@@ -68,12 +68,13 @@
   <!-- my style  -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-query.css">
+  <link rel="stylesheet" href="radio-button.css">
 
   <style>
-    .debug {
+    /* .debug {
       border: 1px solid black;
       border-radius: 10px;
-    }
+    } */
 
     .slide {
       display: none;
@@ -81,6 +82,10 @@
 
     .slide.active {
       display: block;
+    }
+
+    .wrapper {
+      max-width: 900px;
     }
   </style>
 
@@ -151,157 +156,65 @@
   </div>
 
   <!-- desktop -->
-  <div class="text-center d-none d-md-block position-fixed top-0 w-100 py-4 mb-5 pb-5 "
+  <div class="text-center d-none d-md-block position-fixed top-0 w-100 py-4 mb-5 pb-5"
     style="z-index: 4; backdrop-filter:  blur(10px);">
     <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
       style="width: 17em;">
   </div>
-  <div class="container px-md-5" style="min-height: calc(100vh - 14.8rem);">
+
+
+
+  <div class="container px-md-5 " style="min-height: calc(100vh - 14.8rem);">
     <form data-multi-step>
       <!--#############################################-->
       <!--#################à SLIDE 1 - informazioni ###################-->
       <div id="slide-1" class="slide container debug" data-step="1">
-        <!-- <h1 class="pt-5 " >slide 1</h1> -->
+        <h1 class="pt-5 mb-5 border-bottom border-1">Chi vuoi candidare?</h1>
         <!-- <p class="pt-1 pb-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
-          odio consectetur corporis veritatis atque non consequuntur at
-          asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
-          quod, voluptatibus molestias. Necessitatibus, quas in? Veniam
-          accusantium iusto nulla! Dolor ipsam veniam ex iusto maxime recusandae
-          autem. Exercitationem corrupti, beatae nostrum vero quas aliquam neque
-          cupiditate deleniti soluta! Temporibus consequatur, quaerat deserunt
-          itaque corrupti neque perferendis ullam unde architecto consequuntur
-          at provident blanditiis dignissimos, quibusdam facere, aliquid
-          doloribus necessitatibus fuga nemo?
-        </p> -->
-        <div class="row">
-          <div class="col-12 col-md text-center d-flex">
-            <div class="m-auto">
-              <input class="checkbox-tools" type="radio" name="tools" id="tool-1" value="1" required>
-              <label class="for-checkbox-tools" for="tool-1">
-                <i class='uil uil-line-alt'></i>
-                Una startup che conosco
-              </label>
-            </div>
-
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
+            odio consectetur corporis veritatis atque non consequuntur at
+            asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
+            quod, voluptatibus molestias. Necessitatibus, quas in? Veniam
+            accusantium iusto nulla! Dolor ipsam veniam ex iusto maxime recusandae
+            autem. Exercitationem corrupti, beatae nostrum vero quas aliquam neque
+            cupiditate deleniti soluta! Temporibus consequatur, quaerat deserunt
+            itaque corrupti neque perferendis ullam unde architecto consequuntur
+            at provident blanditiis dignissimos, quibusdam facere, aliquid
+            doloribus necessitatibus fuga nemo?
+          </p> -->
+        <div class="row pb-3">
+          <div class="col-12 col-md ">
+            <input class="checkbox-tools" type="radio" name="tools" id="tool-1" value="1" required>
+            <label class="for-checkbox-tools" for="tool-1">
+              Una startup che conosco
+            </label>
           </div>
           <!--########## PARTE A DESTRA  #####################-->
-          <div class="col text-center">
+          <div class="col text-end">
             <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
             <label class="for-checkbox-tools" for="tool-2">
-              <i class='uil uil-vector-square'></i>
               La mia startup
             </label>
           </div>
         </div>
-      </div>
-      <!--#############################################-->
-      <!--#################à SLIDE 2 - Headquarters ###################-->
-      <div id="slide-2" class="slide container pt-5 debug " data-step="2">
-        <!-- <div class="pb-5">
-            <h1>slide 2</h1>
-          </div> -->
-        <!------------------ SEDE LEGALE  ----------------------->
-        <h3 class="text-uppercase border-bottom border-1">sede legale*</h3>
-        <div class="row">
-          <!-- via -->
-          <div class="col-12 col-md">
-            <label for="via" class="form-label fw-bold">Via*</label>
-            <div class="input-group mb-3">
-              <input id="via" type="text" class="form-control" name="via_s_leg" placeholder="Via" required />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <div class="row">
-              <!-- civico  -->
-              <div class="col-12 col-md">
-                <label for="basic-url" class="form-label fw-bold">Numero*</label>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control" name="civico_s_leg" placeholder="Numero" required />
-                </div>
-              </div>
-              <!-- CAP  -->
-              <div class="col">
-                <div class="col-12 col-md">
-                  <label for="basic-url" class="form-label fw-bold">CAP *</label>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control" name="cap_s_leg" placeholder="CAP" required />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- <h1 class="pt-5 border-bottom border-1 mb-3">Informazioni aggiuntive</h1> -->
+        <div class="row py-2">
+          <div class="col-6">
+            <label for="" class="form-label fs-3">Nome della startup</label>
+            <input class="form-control" type="text" name="" id="">
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md">
-            <!-- città -->
-            <label for="citta" class="form-label fw-bold">Città*</label>
-            <div class="input-group mb-3">
-              <input id="citta" type="text" class="form-control" name="citta_s_leg" placeholder="citta" required />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <!-- PROVINCIA  -->
-            <label for="basic-url" class="form-label fw-bold">Provincia *</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="provincia_s_leg" placeholder="Provincia" required />
-            </div>
-          </div>
-        </div>
-        <!------------------ SEDE operativa  --------------------------->
-        <h3 class="text-uppercase border-bottom border-1 mt-5 mb-3">
-          sede operativa
-        </h3>
-        <div class="row">
-          <!-- via -->
-          <div class="col-12 col-md">
-            <label for="via" class="form-label fw-bold">Via</label>
-            <div class="input-group mb-3">
-              <input id="via" type="text" class="form-control" name="via_s_op" placeholder="Via" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <div class="row">
-              <!-- civico  -->
-              <div class="col-12 col-md">
-                <label for="basic-url" class="form-label fw-bold">Numero</label>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control" name="civico_s_op" placeholder="Numero" />
-                </div>
-              </div>
-              <!-- CAP  -->
-              <div class="col">
-                <div class="col-12 col-md">
-                  <label for="basic-url" class="form-label fw-bold">CAP </label>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control" name="cap_s_op" placeholder="CAP" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md">
-            <!-- città -->
-            <label for="citta" class="form-label fw-bold">Città</label>
-            <div class="input-group mb-3">
-              <input id="citta" type="text" class="form-control" name="citta_s_op" placeholder="citta" />
-            </div>
-          </div>
-          <div class="col-12 col-md">
-            <!-- PROVINCIA  -->
-            <label for="basic-url" class="form-label fw-bold">Provincia </label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="provincia_s_op" placeholder="Provincia" />
-            </div>
+        <div class="row py-2">
+          <div class="col">
+            <label for="" class="form-label fs-3">Perchè vuoi candidare questa startup?</label>
+            <textarea class="form-control" name="" id="" rows="15"></textarea>
           </div>
         </div>
       </div>
 
       <!--#############################################-->
-      <!--#################à SLIDE 3 - conferma di invio ###################-->
-      <div id="slide-6" class="slide container pt-5 debug" data-step="3">
+      <!--#################à SLIDE - conferma di invio ###################-->
+      <div id="slide-2" class="slide container pt-5 debug" data-step="3">
         <div class="container p-5 shadow-lg rounded-5 text-center mt-sm-5 ">
           <div class="bg-blue-mr m-auto rounded-circle mb-3 d-flex" style="width: 5rem; height: 5rem;">
             <i class="fa-solid fa-check display-3 text-white m-auto"></i>
@@ -310,9 +223,6 @@
           <p class="fs-5 fw-bolder">Riceverai un amail di riepilogo della registrazione</p>
         </div>
       </div>
-
-
-
       <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
       <div id="controls" class="container my-3">
         <div class="row">
@@ -330,9 +240,9 @@
           </div>
         </div>
       </div>
-
     </form>
   </div>
+
 
 
   <!--######## footer  ################-->

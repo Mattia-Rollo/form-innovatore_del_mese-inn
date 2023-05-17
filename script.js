@@ -10,9 +10,10 @@ let currentStep = formSteps.findIndex(step => {
     showCurrentStep();
   }
   
-  console.log(currentStep);
+  // console.log(currentStep);
 
   multiStepForm.addEventListener("click", e => {
+    // e.preventDefault()
     let incrementor;
     if(e.target.matches("[data-next]")){
       incrementor = 1;
@@ -23,13 +24,13 @@ let currentStep = formSteps.findIndex(step => {
 
     const inputs = [...formSteps[currentStep].querySelectorAll("input")];
     const allValid = inputs.every(input => input.reportValidity());
-    console.log(allValid)
+    console.log(allValid);
 
     if(allValid){
         currentStep += incrementor
         showCurrentStep();
     }
-    console.log(currentStep);
+    // console.log(currentStep);
   })
 
 
