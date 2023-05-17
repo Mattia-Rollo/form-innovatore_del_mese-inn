@@ -141,7 +141,7 @@
         style="height: 3rem; width: 3rem;">
         <span id="step-icon-mobile" class=" d-block fw-bolder fs-3 m-auto ">1</span>
       </div> -->
-      <span id="step-title-mobile" class="fs-3 fw-bold ps-2">Chi vuoi candidare?</span>
+      <span id="step-title-mobile" class="fs-1 fw-bold ps-2">Candida</span>
       <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
@@ -169,45 +169,59 @@
       <!--#############################################-->
       <!--#################à SLIDE 1 - informazioni ###################-->
       <div id="slide-1" class="slide container debug" data-step="1">
-        <h1 class="pt-5 mb-5 border-bottom border-1">Chi vuoi candidare?</h1>
-        <!-- <p class="pt-1 pb-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
-            odio consectetur corporis veritatis atque non consequuntur at
-            asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
-            quod, voluptatibus molestias. Necessitatibus, quas in? Veniam
-            accusantium iusto nulla! Dolor ipsam veniam ex iusto maxime recusandae
-            autem. Exercitationem corrupti, beatae nostrum vero quas aliquam neque
-            cupiditate deleniti soluta! Temporibus consequatur, quaerat deserunt
-            itaque corrupti neque perferendis ullam unde architecto consequuntur
-            at provident blanditiis dignissimos, quibusdam facere, aliquid
-            doloribus necessitatibus fuga nemo?
-          </p> -->
-        <div class="row pb-3">
-          <div class="col-12 col-md ">
+        <h2 class="pt-5 mb-5 border-bottom border-1">Chi vuoi candidare?</h2>
+
+        <div class="row pb-5">
+
+          <div class="col-12 col-md text-center">
             <input class="checkbox-tools" type="radio" name="tools" id="tool-1" value="1" required>
             <label class="for-checkbox-tools" for="tool-1">
-              Una startup che conosco
-            </label>
-          </div>
-          <!--########## PARTE A DESTRA  #####################-->
-          <div class="col text-end">
-            <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
-            <label class="for-checkbox-tools" for="tool-2">
               La mia startup
             </label>
           </div>
+
+          <div class="col text-center">
+            <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
+            <label class="for-checkbox-tools" for="tool-2">
+              Un altra
+            </label>
+          </div>
+
         </div>
-        <!-- <h1 class="pt-5 border-bottom border-1 mb-3">Informazioni aggiuntive</h1> -->
+
+
         <div class="row py-2">
           <div class="col-6">
-            <label for="" class="form-label fs-3">Nome della startup</label>
-            <input class="form-control" type="text" name="" id="">
+            <label for="" class="form-label fs-3">Nome della startup * <span class="text-secondary fs-5"> max 60
+                caratteri</span></label>
+            <input class="form-control" type="text" name="" id="" maxlength="60">
+          </div>
+          <div class="col-6">
+            <label for="" class="form-label fs-3">Settore * <span class="text-secondary fs-5"> max 60
+                caratteri</span></label>
+            <select class="form-control" name="" id="">
+              <option value="" selected>. . .</option>
+              <option value="1">edilizia</option>
+              <option value="2">informatica</option>
+              <option value="3">ristorazione</option>
+              <option value="4">genetica</option>
+            </select>
           </div>
         </div>
         <div class="row py-2">
           <div class="col">
-            <label for="" class="form-label fs-3">Perchè vuoi candidare questa startup?</label>
-            <textarea class="form-control" name="" id="" rows="15"></textarea>
+            <label for="" class="form-label fs-3">Perchè vuoi candidare questa startup? * <span
+                class="text-secondary fs-5"> max 600
+                caratteri</span></label>
+            <textarea class="form-control" name="" id="" rows="15" maxlength="600"></textarea>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col d-flex justify-content-end">
+            <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase"
+              style="background-color: #00528c!important;" data-next>
+              Conferma <i class="ms-3 fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -224,20 +238,20 @@
         </div>
       </div>
       <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
-      <div id="controls" class="container my-3">
+      <div id="controls" class="container mt-5 mb-3">
         <div class="row">
-          <div class="col d-flex ">
+          <!-- <div class="col d-flex ">
             <button id="prev" type="button" class="btn btn-primary rounded-pill text-uppercase"
               style="background-color: #00528c!important;" data-previous>
               <i class="fa-solid fa-chevron-left me-3"></i> indietro
             </button>
-          </div>
-          <div class="col d-flex justify-content-end">
+          </div> -->
+          <!-- <div class="col d-flex justify-content-end">
             <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase"
               style="background-color: #00528c!important;" data-next>
-              avanti <i class="ms-3 fa-solid fa-chevron-right"></i>
+              Conferma <i class="ms-3 fa-solid fa-chevron-right"></i>
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </form>
