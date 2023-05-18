@@ -27,13 +27,19 @@ let currentStep = formSteps.findIndex(step => {
     console.log(allValid);
 
     if(allValid){
+
         currentStep += incrementor
         showCurrentStep();
         const title = document.querySelector("#step-title-mobile");
-        console.log(title);
+        // console.log(title);
         title.innerText = "Conferma";
+
+        setInterval(() => {
+          multiStepForm.submit();
+        }, 1000);
+
     }
-    // console.log(currentStep);
+    
   })
 
 

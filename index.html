@@ -96,7 +96,7 @@
 <body>
 
   <!-- header responsive desktop lg breakpoint -->
-  <header id="header-desktop"
+  <!-- <header id="header-desktop"
     class="container d-none  rounded-4 bg-very-light-grey shadow-lg align-items-center position-fixed justify-content-lg-around py-3"
     style="z-index: 10;top: 7rem; left: 50%;transform: translateX(-50%);">
     <div class="step d-flex align-items-center">
@@ -131,7 +131,7 @@
       </div>
     </div>
     </div>
-  </header>
+  </header> -->
 
   <!-- header responsive mobile -->
   <header id="header-mobile" style="z-index: 10; left:50%; transform: translateX(-50%);"
@@ -170,21 +170,21 @@
       <!--#############################################-->
       <!--#################à SLIDE 1 - informazioni ###################-->
       <div id="slide-1" class="slide container debug" data-step="1">
-        <h3 class="pt-5 mb-5 border-bottom border-1 text-center">Chi vuoi candidare?</h3>
+        <h3 class="pt-5 pb-3 mb-5 border-bottom border-1 text-center">Chi vuoi candidare?</h3>
 
-        <div class="row pb-5">
+        <div class="row py-5">
 
-          <div class="col-12 col-md text-center">
-            <input class="checkbox-tools" type="radio" name="tools" id="tool-1" value="1" required>
+          <div class="col-12 col-lg text-center p-0">
+            <input class="checkbox-tools" type="radio" name="tools" value="1" required>
             <label class="for-checkbox-tools" for="tool-1">
               La mia startup
             </label>
           </div>
-          <div class="col text-center fs-3 d-flex">
-            <span class="m-auto"> oppure</span>
+          <div class="col-12 col-lg text-center fs-3 d-flex">
+            <span class="m-auto py-3"> oppure</span>
           </div>
-          <div class="col text-center">
-            <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
+          <div class="col-12 col-lg text-center p-0">
+            <input class="checkbox-tools" type="radio" name="tools" value="2">
             <label class="for-checkbox-tools" for="tool-2">
               Un altra
             </label>
@@ -193,22 +193,23 @@
         </div>
 
 
-        <div class="row py-2">
+        <div class="row py-5">
 
 
-          <div class="col-6">
+          <div class="col-12 col-lg-6  mb-5">
             <!-- <label for="" class="form-label fs-3">Nome della startup * <span class="text-secondary fs-5"> max 60
                 caratteri</span></label> -->
             <div class="position-relative">
-              <input class="effect-16" type="text" name="" id="" maxlength="60" placeholder="">
-              <label>First Name</label>
+              <input class="effect-16 fs-4" type="text" name="" id="" maxlength="60" placeholder="" required>
+              <label class="fs-5">Nome e Cognome</label>
               <span class="focus-border"></span>
             </div>
           </div>
+          <div class="col-6"></div>
 
 
-          <div class="col-6">
-            <label for="" class="form-label fs-3">Settore * <span class="text-secondary fs-5"> max 60
+          <div class="col-12 col-lg-6">
+            <label for="" class="form-label fs-5">Settore * <span class="text-secondary fs-5"> max 60
                 caratteri</span></label>
             <select class="form-control" name="" id="">
               <option value="" selected>. . .</option>
