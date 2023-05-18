@@ -29,6 +29,9 @@ let currentStep = formSteps.findIndex(step => {
     if(allValid){
         currentStep += incrementor
         showCurrentStep();
+        const title = document.querySelector("#step-title-mobile");
+        console.log(title);
+        title.innerText = "Conferma";
     }
     // console.log(currentStep);
   })
@@ -37,5 +40,6 @@ let currentStep = formSteps.findIndex(step => {
   function showCurrentStep() {
     formSteps.forEach((step,index)=> {
       step.classList.toggle("active", index === currentStep);
+
     })
   }

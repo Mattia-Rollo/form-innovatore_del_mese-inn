@@ -69,6 +69,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-query.css">
   <link rel="stylesheet" href="radio-button.css">
+  <link rel="stylesheet" href="effect-input.css">
 
   <style>
     /* .debug {
@@ -141,7 +142,7 @@
         style="height: 3rem; width: 3rem;">
         <span id="step-icon-mobile" class=" d-block fw-bolder fs-3 m-auto ">1</span>
       </div> -->
-      <span id="step-title-mobile" class="fs-1 fw-bold ps-2">Candida</span>
+      <span id="step-title-mobile" class="fs-2 fw-bold ps-2">Iscrivi una Startup</span>
       <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
@@ -169,7 +170,7 @@
       <!--#############################################-->
       <!--#################à SLIDE 1 - informazioni ###################-->
       <div id="slide-1" class="slide container debug" data-step="1">
-        <h2 class="pt-5 mb-5 border-bottom border-1">Chi vuoi candidare?</h2>
+        <h3 class="pt-5 mb-5 border-bottom border-1 text-center">Chi vuoi candidare?</h3>
 
         <div class="row pb-5">
 
@@ -179,7 +180,9 @@
               La mia startup
             </label>
           </div>
-
+          <div class="col text-center fs-3 d-flex">
+            <span class="m-auto"> oppure</span>
+          </div>
           <div class="col text-center">
             <input class="checkbox-tools" type="radio" name="tools" id="tool-2" value="2">
             <label class="for-checkbox-tools" for="tool-2">
@@ -191,11 +194,19 @@
 
 
         <div class="row py-2">
+
+
           <div class="col-6">
-            <label for="" class="form-label fs-3">Nome della startup * <span class="text-secondary fs-5"> max 60
-                caratteri</span></label>
-            <input class="form-control" type="text" name="" id="" maxlength="60">
+            <!-- <label for="" class="form-label fs-3">Nome della startup * <span class="text-secondary fs-5"> max 60
+                caratteri</span></label> -->
+            <div class="position-relative">
+              <input class="effect-16" type="text" name="" id="" maxlength="60" placeholder="">
+              <label>First Name</label>
+              <span class="focus-border"></span>
+            </div>
           </div>
+
+
           <div class="col-6">
             <label for="" class="form-label fs-3">Settore * <span class="text-secondary fs-5"> max 60
                 caratteri</span></label>
@@ -207,23 +218,32 @@
               <option value="4">genetica</option>
             </select>
           </div>
+
         </div>
+
         <div class="row py-2">
+
+
           <div class="col">
-            <label for="" class="form-label fs-3">Perchè vuoi candidare questa startup? * <span
+            <label for="" class="form-label fs-3">Perchè vuoi candidare questa startup? &nbsp; * &nbsp; <span
                 class="text-secondary fs-5"> max 600
                 caratteri</span></label>
             <textarea class="form-control" name="" id="" rows="15" maxlength="600"></textarea>
           </div>
+
         </div>
+
         <div class="row mt-5">
+
           <div class="col d-flex justify-content-end">
             <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase"
               style="background-color: #00528c!important;" data-next>
               Conferma <i class="ms-3 fa-solid fa-chevron-right"></i>
             </button>
           </div>
+
         </div>
+
       </div>
 
       <!--#############################################-->
